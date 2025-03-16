@@ -1,0 +1,53 @@
+
+*{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    text-indent: 5px;    
+}
+
+a{
+    margin-right: 10px;
+    text-decoration: none;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 7px;
+    padding: 5px;
+    background-color: rgb(255, 255, 255); 
+}
+
+a:hover{
+    color: rgb(0, 0, 255);
+    cursor: pointer;
+}
+
+#submit{
+    margin-right: 10px;
+    text-decoration: none;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 7px;
+    padding: 5px;
+    background-color: rgb(255, 255, 255); 
+}
+
+#submit:hover{
+    color:rgb(0, 255, 115);
+    cursor:pointer;
+}
+
+button{
+    margin-left: 10px;
+        text-decoration: none;
+        background-color: transparent;
+        color: rgb(0, 0, 0);
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 5px;
+        padding: 3px;
+        background-color: rgb(255, 255, 255); 
+    }
+
+    button:hover{
+        color: rgb(255, 123, 0);
+    }
