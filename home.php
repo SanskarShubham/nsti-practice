@@ -1,18 +1,18 @@
 <?php include "header.php" ?>
 
 <div>
-<h2>THIS IS HOMEPAGE</h2>
+    <h2>THIS IS HOMEPAGE</h2>
 
 
-<form action="" id="myForm">
-<label for="input">TODO :</label>
-<input type="text" name="" id="input" placeholder="enter your todo here">
-<input type="date" name="" id="date">
-<button type="submit" id="submit">SUBMIT</button>
+    <form action="http://localhost/karan/submit.php" method="POST" id="myForm">
+        <label for="input">TODO :</label>
+        <input type="text" name="task" id="input" placeholder="enter your todo here" required>
+        <input type="date" name="time" id="date" required>
+        <button type="submit" id="submit">SUBMIT</button>
 
-</form>
-<div id="todo">
+    </form>
+    <div id="todo">
 
-</div>
+    </div>
 
-<?php include "footer.php" ?>
+    <?php include "footer.php" ?>
