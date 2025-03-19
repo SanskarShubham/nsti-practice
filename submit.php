@@ -1,18 +1,6 @@
 <?php
-// echo "dfasdf";exit;
-// Database connection parameters
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "todo_list";   
 
-// Create connection
-$connection = new mysqli($servername, $username, $password, $database);
-
-// Check connection
-if ($connection->connect_error) {
-    die("Connection failed: " . $connection->connect_error);
-}
+include "connection_create.php";
 
 // Get data from the form
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -22,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $time = $_POST['time'];
 
         // Prepare statement using $connection instead of $conn
-        $stmt = $connection->prepare("INSERT INTO todo (task, time) VALUES ('$task', '$time')");
+        $stmt = $conn->prepare("INSERT INTO todo (task, time) VALUES ('$task', '$time')");
 
         if ($stmt) {
 
@@ -45,8 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// Close connection
-$connection->close();
+ include "connection_close.php" 
+
 
 ?>
 

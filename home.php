@@ -11,8 +11,9 @@
         <button type="submit" id="submit">SUBMIT</button>
 
     </form>
-    <div id="todo">
+   
+    <?php include "fetch_data.php" ?>
 
-    </div>
+    
 
     <?php include "footer.php" ?>
