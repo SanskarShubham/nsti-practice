@@ -3,14 +3,10 @@
 include "connection_create.php";
 
 // Get data from the form
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Check if fields are not empty
-    if (!empty($_POST['task']) && !empty($_POST['time'])) {
-        $task = $_POST['task'];
-        $time = $_POST['time'];
-
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
         // Prepare statement using $connection instead of $conn
-        $stmt = $conn->prepare("INSERT INTO todo (task, time) VALUES ('$task', '$time')");
+        $id = $_GET['s_no'];
+        $stmt = $conn->prepare("DELETE FROM todo WHERE s_no = '$id'");
 
         if ($stmt) {
 
@@ -31,10 +27,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Please fill in all fields!";
     }
-}
+
 
     include "connection_close.php" 
 
 
     ?>
-
